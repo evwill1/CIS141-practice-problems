@@ -13,10 +13,7 @@ int1 = int(input("Please enter your first number: "))
 print("Your first number is:", int1)
 # Get second number
 int2 = int(input("Please enter your second number: "))
-print("Your first number is:", int2)
-if int2 == 0: 
-    print("Error: Unusable value")
-    exit()
+
 
 # Calculations
 int3 = int1 + int2
@@ -27,6 +24,7 @@ int6 = int1 / int2
 # Display results
 print (f"{int1} + {int2} = {int3}")
 print (f"{int1} - {int2} = {int4}")
+
 print (f"{int1} x {int2} = {int5}")
 print (f"{int1} ÷ {int2} = {int6:.2f}")
 
@@ -41,20 +39,19 @@ sideB = float(input("Please enter side 'B' of the triangle: "))
 sideC = float(input("Please enter side 'C' of the triangle: "))
 
 # Ensure inputs are valid to agree with triangle inequality theorem
-if sideA + sideB > sideC and sideA + sideC > sideB and sideB + sideC > sideA:
-    print(f"You entered {sideA} for side 'A', {sideB} for side 'B', and {sideC} for side 'C'.")
 
-    # Calculate semiperimeter
 
-    s = 0.5 * (sideA + sideB + sideC)
+print(f"You entered {sideA} for side 'A', {sideB} for side 'B', and {sideC} for side 'C'.")
 
-     # Calculate area
+ # Calculate semiperimeter
 
-    area = math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC))
+s = 0.5 * (sideA + sideB + sideC)
 
-    print(f"The area of your triangle is {area:.2f}")
-else:
-    print("Error: The entered side lengths do not form a valid triangle.")
+# Calculate area
+
+area = math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC))
+
+print(f"The area of your triangle is {area:.2f}")
 
 # 4. Create a program that computes different statistics given five numbers including the total, average, minimum, maximum, range, and standard deviation (https://en.wikipedia.org/wiki/Standard_deviation).
 
