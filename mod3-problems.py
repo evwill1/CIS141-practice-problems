@@ -14,10 +14,11 @@ print(word * repetitions)
 #prompt for name and age
 name = input("Please enter your name: ")
 age = int(input("Please enter your age: "))
+
 # Calculate age next year
-AgeNextYear = age + 1
+age_next_year = age + 1
 #print
-print(f"Hello {name}! You are {age} years old. Next year, you will be {AgeNextYear} years old.")
+print("Hello " + name + "! You are " + str(age) + "years old. Next year, you will be " + str(age_next_year) + " years old.")
 #3. Prompt the user for a sentence and a word to try to find in that sentence. Have the program print out whether the word was found in the sentence. (i.e. True or False)
 # Prompt the user for a sentence
 sentence = input("Please enter a sentence: ")
@@ -43,11 +44,11 @@ end_index = int(input("Enter the ending index: "))
  # Slice the word using the provided indexes
 sliced_word = word[start_index:end_index]
 
-    # Print the result
+# Print the result
 print(f"The sliced word is: {sliced_word}")
 
 #5. Print 3 words with a | character (called a pipe) in between them. Use the appropriate keyword argument in print() to do so.
 word1 = input("Please enter word 1: ")
 word2 = input("Please enter word 2: ")
 word3 = input("Please enter word 3: ")
-print(word1, word2, word3, sep="|")
+print(f"{word1}", f"{word2}", f"{word3}", sep="|")
