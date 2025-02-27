@@ -76,18 +76,19 @@ with open("song_lyrics.txt", "r") as file:
                 word5_count += 1
                 
 # Create dictionary for words: count. 
-    word_count = {
-        "Word 1": (word1, word1_count),
-        "Word 2": (word2, word2_count),
-        "Word 3": (word3, word3_count),
-        "Word 4": (word4, word4_count),
-        "Word 5": (word5, word5_count)
+word_count = {
     }
-# Print dictionary
-for word_num, (word, count) in word_count.items():
-    print(f"{word_num}: {word}, Count: {count}")
-file.close()
 
+word_count[word1] = word1_count
+word_count[word2] = word2_count
+word_count[word3] = word3_count
+word_count[word4] = word4_count
+word_count[word5] = word5_count
+
+# Print dictionary
+for word, count in word_count.items():
+    print(f"Word: {word}, Count: {count}")
+file.close()
 
 
 # #4. Create a poll.txt file that contains a list of "yea" or "nay" votes separated
@@ -107,7 +108,7 @@ with open("poll.txt", "r") as file:
     # check for votes in poll.txt
     for word in content.split(","):
         
-        # remove whitespace
+        # remove extra characters
         vote = word.strip() 
         
         #check for votes and add to counter
